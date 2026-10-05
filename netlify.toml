@@ -1,0 +1,72 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "24"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+  included_files = ["data/synthetic/**", "data/corpus-release/**"]
+
+# API rewrites must precede the SPA fallback. Unknown API paths stay JSON 404.
+[[redirects]]
+  from = "/api/capabilities"
+  to = "/.netlify/functions/capabilities"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/analyze-document"
+  to = "/.netlify/functions/document"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/clinic-demo"
+  to = "/.netlify/functions/clinic"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/analyze-demo"
+  to = "/.netlify/functions/analyze"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api"
+  to = "/.netlify/functions/api-not-found"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api-not-found"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer"
+    X-Frame-Options = "DENY"
+    Permissions-Policy = "camera=(self), microphone=(), geolocation=()"
+    Content-Security-Policy = "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; worker-src 'self' blob:; frame-src 'self' blob:"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

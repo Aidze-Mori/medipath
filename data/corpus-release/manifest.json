@@ -1,0 +1,245 @@
+{
+  "version": 1,
+  "corpusVersion": "workflow-2026-10-04-v1",
+  "corpusSha256": "1ad196994ff62e296cc656464a4f5ebc42d3e1fb76d39444d26b64116b5b94b4",
+  "clinicalSourcesAdmitted": 0,
+  "clinicalDemo": {
+    "version": "clinical-demo-2026-10-05-v1",
+    "sha256": "537e141f987042b26ce417f56a1d606b53073dd1fc5ef9597d611429c260d27d",
+    "scope": "canonical_synthetic_only",
+    "clinicalReviewed": false
+  },
+  "trustedFiles": [
+    {
+      "path": "/examples/synthetic-chest-referral.txt",
+      "fixtureId": "chest-referral",
+      "fixtureRevision": 1,
+      "reviewVariant": "canonical",
+      "sha256": "972ff50b723a3318190e3d1211db9adacd3ec6e2bbf20e4258c0b4ce2a25d3be"
+    },
+    {
+      "path": "/examples/synthetic-breast-referral.txt",
+      "fixtureId": "breast-referral",
+      "fixtureRevision": 1,
+      "reviewVariant": "canonical",
+      "sha256": "9e45a7153b3bdb6bed576599695a32ef4485555bfb56b13c11c53a49961d99b6"
+    },
+    {
+      "path": "/examples/synthetic-chest-negative.txt",
+      "fixtureId": "chest-negative",
+      "fixtureRevision": 1,
+      "reviewVariant": "canonical",
+      "sha256": "21378bd6f8aae5c4e76d96f922576e18517630da1afc181ec2b9598dd13e2881"
+    },
+    {
+      "path": "/examples/synthetic-missing-conclusion.txt",
+      "fixtureId": "missing-conclusion",
+      "fixtureRevision": 1,
+      "reviewVariant": "canonical",
+      "sha256": "b72e6bf174d3e1f6b12879b3c24ace10b9ccb19211bcc39f35e96916ea285d8c"
+    },
+    {
+      "path": "/examples/synthetic-conflicting-sections.txt",
+      "fixtureId": "conflicting-sections",
+      "fixtureRevision": 1,
+      "reviewVariant": "canonical",
+      "sha256": "48db42a0a981a3b5f8dd0749bdc1e3ba8125f5eaed0e6f3383d5923c8491a55d"
+    },
+    {
+      "path": "/examples/synthetic-explicit-urgent.txt",
+      "fixtureId": "explicit-urgent",
+      "fixtureRevision": 2,
+      "reviewVariant": "canonical",
+      "sha256": "48c215ea4a3dc72c675de50b084ce19b5d4a497ec529387def12861e85dcaf1c"
+    },
+    {
+      "path": "/examples/synthetic-unsupported-text.txt",
+      "fixtureId": "unsupported-text",
+      "fixtureRevision": 1,
+      "reviewVariant": "canonical",
+      "sha256": "19435844ed2ba7310b598d0dd817d696850ef04995f8b37aa9a2e242ad51f1f4"
+    },
+    {
+      "path": "/examples/synthetic-negated-referral.txt",
+      "fixtureId": "negated-referral",
+      "fixtureRevision": 1,
+      "reviewVariant": "canonical",
+      "sha256": "e2041da9507229cdabf90764e6ac1ebc3ee5878989cd6b7fa2b58c562a7d94ea"
+    },
+    {
+      "path": "/examples/synthetic-chest-referral.pdf",
+      "fixtureId": "chest-referral",
+      "fixtureRevision": 1,
+      "reviewVariant": "canonical",
+      "sha256": "f21f08933c91f307841f5a376ea325a01bd7020e4b46665817a5f1bfcb7f30b7"
+    },
+    {
+      "path": "/examples/synthetic-chest-referral.png",
+      "fixtureId": "chest-referral",
+      "fixtureRevision": 1,
+      "reviewVariant": "canonical",
+      "sha256": "680ed489235425b9496105f14c61a269e5122fd81e59c38555cc75a0090fb2d2"
+    },
+    {
+      "path": "/examples/synthetic-clinical-birads4.txt",
+      "fixtureId": "clinical-birads4",
+      "fixtureRevision": 1,
+      "reviewVariant": "canonical",
+      "sha256": "f2e6ad2e593a0f591ae4b01347c7f5ef33103db3afaa385362a6cc0962dac77c"
+    },
+    {
+      "path": "/examples/synthetic-clinical-birads0.txt",
+      "fixtureId": "clinical-birads0",
+      "fixtureRevision": 1,
+      "reviewVariant": "canonical",
+      "sha256": "2747ffe881a7283db1b83090687124b84777744c726e04249897e81a566cee1c"
+    },
+    {
+      "path": "/examples/synthetic-clinical-birads2.txt",
+      "fixtureId": "clinical-birads2",
+      "fixtureRevision": 1,
+      "reviewVariant": "canonical",
+      "sha256": "139294f4455372a8a42b4a5b9b9a7993781a3117254e1a3627f0494c46c32e09"
+    },
+    {
+      "path": "/examples/synthetic-exam-without-specialty.txt",
+      "fixtureId": "exam-without-specialty",
+      "fixtureRevision": 1,
+      "reviewVariant": "canonical",
+      "sha256": "e61bb9b2ecc7100561eedc7b7900b0c18e282c58dcdfa485574a5f94520ab22f"
+    },
+    {
+      "path": "/examples/synthetic-doctor-report.txt",
+      "fixtureId": "doctor-report",
+      "fixtureRevision": 1,
+      "reviewVariant": "canonical",
+      "sha256": "fc8ce7c49ef154eb6b4cb3bd570ce6784fab83d62bf5ed3e8ed6368f30f65233"
+    },
+    {
+      "path": "/examples/synthetic-doctor-report.pdf",
+      "fixtureId": "doctor-report",
+      "fixtureRevision": 1,
+      "reviewVariant": "canonical",
+      "sha256": "4aa5c74a45bdbfaaa6ee776e0ab84c86375724903285c4c79a4661686db97211"
+    }
+  ],
+  "variants": [
+    {
+      "fixtureId": "chest-referral",
+      "fixtureRevision": 1,
+      "reviewVariantId": "canonical",
+      "contentDigest": "e79c0693ba494c95b2e2b52cdc4dea48f46e9199c2b74e18cc520343f8081332",
+      "allowedOperations": [
+        "explain"
+      ]
+    },
+    {
+      "fixtureId": "breast-referral",
+      "fixtureRevision": 1,
+      "reviewVariantId": "canonical",
+      "contentDigest": "dc616a3612164646fbfba6f4f27cfa65b236f86af09346164df41c2a77da34b4",
+      "allowedOperations": [
+        "explain"
+      ]
+    },
+    {
+      "fixtureId": "chest-negative",
+      "fixtureRevision": 1,
+      "reviewVariantId": "canonical",
+      "contentDigest": "e6abb770491b42b6dbd95e67d20fda30e9a4899b2584b00e18e2566d176c73db",
+      "allowedOperations": [
+        "explain"
+      ]
+    },
+    {
+      "fixtureId": "missing-conclusion",
+      "fixtureRevision": 1,
+      "reviewVariantId": "canonical",
+      "contentDigest": "e9a87f724169bafd66c56e65e8869a3c42bdc2a8c5d8db39c0c27e0e035726f5",
+      "allowedOperations": [
+        "explain"
+      ]
+    },
+    {
+      "fixtureId": "conflicting-sections",
+      "fixtureRevision": 1,
+      "reviewVariantId": "canonical",
+      "contentDigest": "0c5deef5654c54ae2430ba46dd057a59ec77b618181876b5ed6176b6136ed090",
+      "allowedOperations": [
+        "explain"
+      ]
+    },
+    {
+      "fixtureId": "explicit-urgent",
+      "fixtureRevision": 2,
+      "reviewVariantId": "canonical",
+      "contentDigest": "31213952f642fadfdba18733f6992609149cc216be313451a6b1d41138874c34",
+      "allowedOperations": [
+        "explain"
+      ]
+    },
+    {
+      "fixtureId": "unsupported-text",
+      "fixtureRevision": 1,
+      "reviewVariantId": "canonical",
+      "contentDigest": "c3e6aaedb9c2c3197f259f6b18e54539ec1f0885df412228a048cd58587dcce4",
+      "allowedOperations": [
+        "explain"
+      ]
+    },
+    {
+      "fixtureId": "negated-referral",
+      "fixtureRevision": 1,
+      "reviewVariantId": "canonical",
+      "contentDigest": "c509575c2061cbcbef6dbc0beed17abd63471674ffc41630e8ba6b3d7ef71ef2",
+      "allowedOperations": [
+        "explain"
+      ]
+    },
+    {
+      "fixtureId": "clinical-birads4",
+      "fixtureRevision": 1,
+      "reviewVariantId": "canonical",
+      "contentDigest": "394635dd5f14d18370119ffdaab693ff404d3c35827432d30e8aef6e1999576d",
+      "allowedOperations": [
+        "explain"
+      ]
+    },
+    {
+      "fixtureId": "clinical-birads0",
+      "fixtureRevision": 1,
+      "reviewVariantId": "canonical",
+      "contentDigest": "016a1453ab50b841647f21b6e51b2dcae9c5898571ec17354f1e2759c6b99c0e",
+      "allowedOperations": [
+        "explain"
+      ]
+    },
+    {
+      "fixtureId": "clinical-birads2",
+      "fixtureRevision": 1,
+      "reviewVariantId": "canonical",
+      "contentDigest": "a8aaf3c2032257f29f1257896a1b0b01450c6c9998c548af2bacd7800f1c7f84",
+      "allowedOperations": [
+        "explain"
+      ]
+    },
+    {
+      "fixtureId": "exam-without-specialty",
+      "fixtureRevision": 1,
+      "reviewVariantId": "canonical",
+      "contentDigest": "d6dc8a2464b10a6ab973059a1b1d4e276f3efc1fa2e9e9e8b53942a7b103e3dd",
+      "allowedOperations": [
+        "explain"
+      ]
+    },
+    {
+      "fixtureId": "doctor-report",
+      "fixtureRevision": 1,
+      "reviewVariantId": "canonical",
+      "contentDigest": "1621705b289e4661f5068011e166df87fd7d6b70f45ce53df5d923a158b6dbcd",
+      "allowedOperations": [
+        "explain"
+      ]
+    }
+  ]
+}

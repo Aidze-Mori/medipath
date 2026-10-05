@@ -1,0 +1,83 @@
+.demo-dialog { width:min(1040px,calc(100vw - 48px)); max-width:1040px; max-height:min(880px,calc(var(--visible-height,100dvh) - 48px)); }
+.demo-dialog .dialog-header { padding-block:10px; }
+.demo-dialog .dialog-header h2 { font-size:24px; }
+.demo-dialog .dialog-content { padding-block:14px; }
+.demo-panel { display:grid; gap:12px; min-width:0; }
+.demo-session-state { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:4px 12px; }
+.demo-session-label { display:inline-flex; align-items:center; gap:7px; color:var(--mp-muted); font-size:12px; }
+.demo-session-label > span { width:6px; height:6px; border-radius:50%; background:var(--mp-primary); }
+.demo-session-state .btn { font-size:12px; min-height:36px; padding:6px 0; }
+.demo-overview { display:grid; gap:6px; }
+.demo-overview h3 { font-size:22px; }
+.demo-overview p { color:var(--mp-muted); font-size:14px; line-height:1.6; }
+.demo-server-state { display:flex; flex-wrap:wrap; align-items:center; gap:6px; font-size:12px; color:var(--mp-muted); }
+.demo-server-state p { flex:1; min-width:0; }
+.demo-server-dot { width:6px; height:6px; background:var(--mp-muted); border-radius:50%; }
+.demo-server-state.is-ready .demo-server-dot { background:var(--mp-primary); }
+.demo-server-state .btn { padding:4px 0; font-size:12px; min-height:36px; }
+.demo-case-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+.demo-story { display:flex; flex-direction:column; gap:10px; min-width:0; border:1px solid var(--mp-border); border-radius:var(--mp-radius-card); padding:16px; background:var(--mp-surface); }
+.demo-story-top { display:flex; align-items:center; justify-content:space-between; }
+.demo-scenario-icon { width:32px; height:32px; display:grid; place-items:center; flex-shrink:0; border-radius:var(--mp-radius-control); color:var(--mp-primary); background:var(--mp-surface-soft); }
+.demo-story-number { font-size:13px; color:var(--mp-muted); font-variant-numeric:tabular-nums; }
+.demo-story h3 { margin-top:5px; font-size:18px; line-height:1.35; }
+.demo-story .eyebrow { font-size:13px; letter-spacing:0; }
+
+.demo-journey { display:flex; flex-wrap:wrap; gap:4px; padding:0; margin:0; list-style:none; color:var(--mp-muted); font-size:13px; align-content:flex-start; }
+.demo-journey li { display:flex; gap:4px; align-items:center; }
+.demo-journey li span { padding-block:2px; }
+.demo-story-outcome { display:grid; gap:4px; border-top:1px solid var(--mp-border); padding-top:10px; font-size:13px; line-height:1.5; }
+.demo-story-outcome strong { color:var(--mp-heading); font-weight:500; }
+.demo-story-outcome span { color:var(--mp-muted); }
+.demo-story-launch { display:grid; gap:8px; margin-top:auto; padding-top:4px; }
+.demo-story-launch .btn { width:100%; min-height:48px; padding:10px 12px; text-align:center; font-size:13px; }
+.demo-story-launch .btn svg { flex-shrink:0; }
+.demo-processing-label { font-size:13px; line-height:1.5; color:var(--mp-muted); }
+.demo-fixture-note { color:var(--mp-muted); font-size:12px; line-height:1.6; }
+.demo-advanced { border-top:1px solid var(--mp-border); border-bottom:1px solid var(--mp-border); }
+.demo-advanced > summary { min-height:48px; padding-block:14px; font-size:13px; font-weight:500; color:var(--mp-text); cursor:pointer; }
+.demo-advanced-content { display:grid; gap:16px; padding:4px 0 20px; }
+.demo-advanced-content > p { color:var(--mp-muted); font-size:13px; line-height:1.6; }
+.demo-advanced-actions { display:flex; flex-wrap:wrap; gap:8px; }
+.demo-advanced-actions .btn { font-size:13px; flex:1; }
+.demo-advanced-content .demo-technical-note { font-size:12px; }
+.demo-technical-cases { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.demo-technical-cases article { min-width:0; display:grid; gap:8px; border:1px solid var(--mp-border); border-radius:var(--mp-radius-card); padding:16px; }
+.demo-technical-cases .eyebrow { font-size:10px; }
+.demo-technical-cases h4 { font-size:15px; }
+.demo-technical-cases p { font-size:12px; color:var(--mp-muted); line-height:1.6; }
+.demo-technical-cases .btn { justify-content:flex-start; text-align:left; padding-left:0; font-size:12px; }
+.demo-additional-cases { display:flex; flex-wrap:wrap; gap:4px 12px; }
+.demo-additional-cases .btn { min-height:44px; text-align:left; font-size:12px; padding-left:0; }
+.demo-destinations { display:flex; flex-wrap:wrap; gap:4px 20px; }
+.demo-destinations .btn { min-height:44px; font-size:12px; padding-left:0; }
+.demo-session-actions { display:grid; gap:8px; }
+.demo-session-actions > p { color:var(--mp-muted); font-size:12px; line-height:1.6; }
+.demo-session-actions > div { display:flex; gap:12px; flex-wrap:wrap; }
+.demo-session-actions .btn { min-height:36px; padding:6px 0; font-size:12px; }
+.demo-safety-note { display:flex; align-items:flex-start; gap:8px; color:var(--mp-muted); font-size:11px; line-height:1.6; }
+.demo-safety-note svg { color:var(--mp-primary); margin-top:1px; flex-shrink:0; }
+.incoming-result { display:grid; gap:18px; }
+.notification-dot { position:absolute; top:7px; right:7px; width:7px; height:7px; border-radius:50%; background:var(--mp-primary); }
+.clinic-header-tools > .icon-button { position:relative; }
+@media(max-width:900px) {
+  .demo-dialog { width:min(640px,calc(100vw - 32px)); }
+  .demo-case-grid { grid-template-columns:1fr; }
+  .demo-story { gap:12px; }
+  .demo-story h3,.demo-story > p,.demo-journey { min-height:0; }
+  .demo-story h3 { font-size:18px; }
+  .demo-story-launch .btn { font-size:13px; }
+}
+@media(max-width:767px) {
+  .demo-dialog { width:calc(100vw - 16px); max-height:calc(var(--visible-height,100dvh) - 16px); }
+  .demo-dialog .dialog-header h2 { font-size:22px; }
+  .demo-dialog .dialog-content { padding-block:16px; }
+  .demo-story { padding:16px; }
+  .demo-overview h3 { font-size:20px; }
+  .demo-session-state .btn,.demo-session-actions .btn,.demo-server-state .btn { min-height:44px; }
+  .demo-advanced-actions { flex-direction:column; }
+  .demo-technical-cases { grid-template-columns:1fr; }
+}
+
+.demo-session-tools { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px; }
+.demo-session-tools .role-switch { display:flex; }

@@ -1,0 +1,14 @@
+node_modules/
+dist/
+dist-server/
+.env
+.env.*
+!.env.example
+.netlify/
+public/ocr/
+public/pdfjs/
+test-results/
+playwright-report/
+coverage/
+artifacts/
+.DS_Store

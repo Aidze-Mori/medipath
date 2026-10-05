@@ -1,0 +1,32 @@
+.visit-booking { display: grid; gap: var(--mp-space-16); border: 1px solid var(--mp-border); border-radius: var(--mp-radius-card); padding: var(--mp-space-24); background: var(--mp-surface); min-width: 0; }
+.visit-booking-status { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--mp-space-12); font-size: var(--mp-font-size-caption); color: var(--mp-muted); }
+.visit-booking-status > span:first-child { display: inline-flex; align-items: center; gap: 6px; color: var(--mp-primary); }
+.visit-booking-confirmation { font-size: var(--mp-font-size-small); font-weight: 400; color: var(--mp-muted); line-height: 1.5; }
+.visit-booking-person { display: flex; align-items: center; gap: var(--mp-space-16); }
+.visit-booking-person img { width: 54px; height: 54px; border-radius: var(--mp-radius-pill); object-fit: cover; }
+.visit-booking-person h4 { font-size: var(--mp-font-size-card-title); margin: 0 0 5px; }
+.visit-booking-person p { font-size: var(--mp-font-size-small); color: var(--mp-muted); }
+.visit-booking-facts { display: grid; grid-template-columns: .55fr 1.6fr 1fr; gap: var(--mp-space-24); margin: var(--mp-space-8) 0; }
+.visit-booking-facts > div { display: grid; align-content: start; gap: var(--mp-space-8); min-width: 0; }
+.visit-booking-facts dt { display: flex; gap: 6px; align-items: center; font-size: var(--mp-font-size-caption); color: var(--mp-muted); }
+.visit-booking-facts dd { display: grid; gap: 5px; margin: 0; font-size: var(--mp-font-size-small); }
+.visit-booking-facts dd span { color: var(--mp-muted); font-size: var(--mp-font-size-caption); }
+.visit-booking > .btn { justify-self: start; }
+.route-card .visit-booking { padding: var(--mp-space-16); background: var(--mp-canvas); }
+.route-card .visit-booking-facts { grid-template-columns: 1fr; gap: var(--mp-space-12); }
+.route-card .visit-booking-person h4 { font-size: var(--mp-font-size-body); }
+@media (max-width: 767px) {
+  .visit-booking { padding: var(--mp-space-20); }
+  .visit-booking-person { gap: var(--mp-space-12); align-items: flex-start; }
+  .visit-booking-person img { width: 44px; height: 44px; }
+  .visit-booking-person h4 { font-size: var(--mp-font-size-body); }
+  .visit-booking-facts { grid-template-columns: 1fr; gap: var(--mp-space-16); }
+  .visit-booking > .btn { justify-self: stretch; }
+  .route-card .visit-booking { margin-left: -52px; }
+}
+.booking-days { display:grid; gap:var(--mp-space-32); }
+.booking-day { min-width:0; }
+.booking-day-heading { display:flex; align-items:baseline; flex-wrap:wrap; gap:var(--mp-space-12); padding:0 0 var(--mp-space-16); margin-bottom:var(--mp-space-16); border-bottom:2px solid var(--mp-border); }
+.booking-day-heading h3 { text-transform:capitalize; font-size:var(--mp-font-size-card-title); color:var(--mp-primary); }
+.booking-day-item { display:grid; gap:var(--mp-space-8); min-width:0; }
+.booking-day-item > .btn { justify-self:start; }

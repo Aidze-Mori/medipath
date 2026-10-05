@@ -1,0 +1,14 @@
+{
+  "corpusVersion": "workflow-2026-10-04-v1",
+  "scope": "nonclinical_workflow_only",
+  "clinicalSources": [],
+  "clinicalRules": [],
+  "sources": [{ "id": "medipath-workflow", "title": "MediPath: организационная демонстрация", "version": "1", "releaseStatus": "released", "rights": "project_authored", "clinicalReviewed": false }],
+  "chunks": [
+    {"id":"explicit-referral","sourceId":"medipath-workflow","text":"Если в подтверждённом тексте прямо рекомендована консультация специалиста, приложение помогает выбрать демонстрационный слот по этому направлению. Новое медицинское назначение не создаётся.","terms":["рекомендована","консультация","направление","пульмонолога","маммолога"],"task":"workflow","releaseStatus":"released","rights":"project_authored"},
+    {"id":"missing-evidence","sourceId":"medipath-workflow","text":"Если явное направление отсутствует, приложение не выбирает специальность по названию находки. Срок остаётся не указанным, если его нет в исходнике.","terms":["отсутствует","не указано","заключение","нет"],"task":"workflow","releaseStatus":"released","rights":"project_authored"},
+    {"id":"source-conflict","sourceId":"medipath-workflow","text":"Несогласованные разделы требуют сверки с исходником. Приложение не выбирает одну из противоречащих формулировок как правильную.","terms":["противоречие","справа","слева","сверки"],"task":"workflow","releaseStatus":"released","rights":"project_authored"},
+    {"id":"demo-booking","sourceId":"medipath-workflow","text":"Демонстрационная запись появляется только после отдельного подтверждения выбранного врача и времени. Сообщения в реальную клинику не отправляются.","terms":["запись","врач","слот","подтверждение"],"task":"workflow","releaseStatus":"released","rights":"project_authored"}
+  ],
+  "limitations": ["Клинические рекомендации и МКБ из исследовательского архива не допущены в runtime: права и клиническая проверка не завершены.","Маршруты используют только явное направление исходного документа. Корпус объясняет действия приложения, а не медицинские термины или находки."]
+}

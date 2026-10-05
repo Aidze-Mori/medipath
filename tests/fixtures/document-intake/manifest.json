@@ -1,0 +1,394 @@
+{
+  "schema_version": 1,
+  "created_date": "2026-10-04",
+  "purpose": "Future document intake tests and jury demo",
+  "implementation_status": "fixtures_only_support_not_implemented_or_tested",
+  "clinical_seed_count": 1,
+  "input_fixture_count": 12,
+  "split_policy": "All variants sharing case_family / split_group must stay in the same data split; these formats are not independent clinical cases.",
+  "image_note": "PNG/JPEG are clean synthetic page rasters rendered from a PDF. They are not phone photographs or scans of real patient records.",
+  "status_note": "Expected statuses describe proposed handling by a future intake implementation; no application or OCR pipeline has been exercised.",
+  "fixtures": [
+    {
+      "fixture_id": "brain-mri-normal-txt",
+      "path": "files/brain-mri-normal.txt",
+      "sha256": "031584a8555cc36ec97dbee290846de477282c9273819fd3e6f2937f57858434",
+      "byte_length": 3336,
+      "mime_type": "text/plain",
+      "case_id": "radiologary-brain-mri-normal-001",
+      "case_family": "radiologary-brain-mri-normal-001",
+      "split_group": "radiologary-brain-mri-normal-001",
+      "source": {
+        "kind": "public_licensed_template_not_patient_record",
+        "title": "МРТ ГМ и ММУ (головного мозга и мостомозжечковых углов) - шаблон протокола",
+        "url": "https://radiologary.ru/templates/mrt-golovnogo-mozga-i-mmu-norma.html",
+        "publisher": "Radiologary",
+        "editor": "Д. Г. Королев",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "publisher_license_url": "https://radiologary.ru/license.html",
+        "retrieved_date": "2026-10-04",
+        "adaptation": "Исходные клинические предложения сохранены дословно. Добавлены заголовок Описание, учебная маркировка, case_id, атрибуция; изменены только оформление, разбивка по страницам и контейнер файла. В варианте description-only заключение намеренно удалено."
+      },
+      "expected": {
+        "document_status": "ready",
+        "reader": "utf8_text",
+        "page_count": null,
+        "completeness": "complete",
+        "description_present": true,
+        "conclusion_present": true,
+        "clinical_ground_truth": "ground-truth/case.json",
+        "medical_route_ground_truth": null
+      }
+    },
+    {
+      "fixture_id": "brain-mri-normal-docx",
+      "path": "files/brain-mri-normal.docx",
+      "sha256": "79ff33ba76fbfe14296b626d1de988cf33921f5daf2480b5978fd08dc34df26c",
+      "byte_length": 38246,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "case_id": "radiologary-brain-mri-normal-001",
+      "case_family": "radiologary-brain-mri-normal-001",
+      "split_group": "radiologary-brain-mri-normal-001",
+      "source": {
+        "kind": "public_licensed_template_not_patient_record",
+        "title": "МРТ ГМ и ММУ (головного мозга и мостомозжечковых углов) - шаблон протокола",
+        "url": "https://radiologary.ru/templates/mrt-golovnogo-mozga-i-mmu-norma.html",
+        "publisher": "Radiologary",
+        "editor": "Д. Г. Королев",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "publisher_license_url": "https://radiologary.ru/license.html",
+        "retrieved_date": "2026-10-04",
+        "adaptation": "Исходные клинические предложения сохранены дословно. Добавлены заголовок Описание, учебная маркировка, case_id, атрибуция; изменены только оформление, разбивка по страницам и контейнер файла. В варианте description-only заключение намеренно удалено."
+      },
+      "expected": {
+        "document_status": "ready",
+        "reader": "docx_text",
+        "page_count": 1,
+        "completeness": "complete",
+        "description_present": true,
+        "conclusion_present": true,
+        "clinical_ground_truth": "ground-truth/case.json",
+        "medical_route_ground_truth": null
+      }
+    },
+    {
+      "fixture_id": "brain-mri-normal-doc",
+      "path": "files/brain-mri-normal.doc",
+      "sha256": "babd1edde396a88c3b1af2f7388b1b5e6ea11d478bf7a4e647325695b6bd76b1",
+      "byte_length": 22528,
+      "mime_type": "application/msword",
+      "case_id": "radiologary-brain-mri-normal-001",
+      "case_family": "radiologary-brain-mri-normal-001",
+      "split_group": "radiologary-brain-mri-normal-001",
+      "source": {
+        "kind": "public_licensed_template_not_patient_record",
+        "title": "МРТ ГМ и ММУ (головного мозга и мостомозжечковых углов) - шаблон протокола",
+        "url": "https://radiologary.ru/templates/mrt-golovnogo-mozga-i-mmu-norma.html",
+        "publisher": "Radiologary",
+        "editor": "Д. Г. Королев",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "publisher_license_url": "https://radiologary.ru/license.html",
+        "retrieved_date": "2026-10-04",
+        "adaptation": "Исходные клинические предложения сохранены дословно. Добавлены заголовок Описание, учебная маркировка, case_id, атрибуция; изменены только оформление, разбивка по страницам и контейнер файла. В варианте description-only заключение намеренно удалено."
+      },
+      "expected": {
+        "document_status": "ready",
+        "reader": "legacy_doc_converter",
+        "page_count": 1,
+        "completeness": "complete",
+        "description_present": true,
+        "conclusion_present": true,
+        "clinical_ground_truth": "ground-truth/case.json",
+        "medical_route_ground_truth": null
+      }
+    },
+    {
+      "fixture_id": "brain-mri-native-pdf",
+      "path": "files/brain-mri-native.pdf",
+      "sha256": "7d6b98058f958087a64d1a740cb40c840f80a12c952c175ae94dfcd1ed07a83b",
+      "byte_length": 52536,
+      "mime_type": "application/pdf",
+      "case_id": "radiologary-brain-mri-normal-001",
+      "case_family": "radiologary-brain-mri-normal-001",
+      "split_group": "radiologary-brain-mri-normal-001",
+      "source": {
+        "kind": "public_licensed_template_not_patient_record",
+        "title": "МРТ ГМ и ММУ (головного мозга и мостомозжечковых углов) - шаблон протокола",
+        "url": "https://radiologary.ru/templates/mrt-golovnogo-mozga-i-mmu-norma.html",
+        "publisher": "Radiologary",
+        "editor": "Д. Г. Королев",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "publisher_license_url": "https://radiologary.ru/license.html",
+        "retrieved_date": "2026-10-04",
+        "adaptation": "Исходные клинические предложения сохранены дословно. Добавлены заголовок Описание, учебная маркировка, case_id, атрибуция; изменены только оформление, разбивка по страницам и контейнер файла. В варианте description-only заключение намеренно удалено."
+      },
+      "expected": {
+        "document_status": "ready",
+        "reader": "pdf_text",
+        "page_count": 1,
+        "completeness": "complete",
+        "description_present": true,
+        "conclusion_present": true,
+        "clinical_ground_truth": "ground-truth/case.json",
+        "medical_route_ground_truth": null
+      }
+    },
+    {
+      "fixture_id": "brain-mri-clean-scan-png",
+      "path": "files/brain-mri-clean-scan.png",
+      "sha256": "7f4c4368e89c5d35c0f06aa9fdc268e7e29e9e16e38febc7301534517fcd899e",
+      "byte_length": 329940,
+      "mime_type": "image/png",
+      "case_id": "radiologary-brain-mri-normal-001",
+      "case_family": "radiologary-brain-mri-normal-001",
+      "split_group": "radiologary-brain-mri-normal-001",
+      "source": {
+        "kind": "public_licensed_template_not_patient_record",
+        "title": "МРТ ГМ и ММУ (головного мозга и мостомозжечковых углов) - шаблон протокола",
+        "url": "https://radiologary.ru/templates/mrt-golovnogo-mozga-i-mmu-norma.html",
+        "publisher": "Radiologary",
+        "editor": "Д. Г. Королев",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "publisher_license_url": "https://radiologary.ru/license.html",
+        "retrieved_date": "2026-10-04",
+        "adaptation": "Исходные клинические предложения сохранены дословно. Добавлены заголовок Описание, учебная маркировка, case_id, атрибуция; изменены только оформление, разбивка по страницам и контейнер файла. В варианте description-only заключение намеренно удалено."
+      },
+      "expected": {
+        "document_status": "ready_after_ocr_review",
+        "reader": "image_ocr",
+        "page_count": 1,
+        "completeness": "complete",
+        "description_present": true,
+        "conclusion_present": true,
+        "clinical_ground_truth": "ground-truth/case.json",
+        "medical_route_ground_truth": null
+      }
+    },
+    {
+      "fixture_id": "brain-mri-clean-scan-jpg",
+      "path": "files/brain-mri-clean-scan.jpg",
+      "sha256": "59410d396a5ddb36bb29a3ef03dcaa83dbf0444f848ef253db4f033f6e1f15e1",
+      "byte_length": 517615,
+      "mime_type": "image/jpeg",
+      "case_id": "radiologary-brain-mri-normal-001",
+      "case_family": "radiologary-brain-mri-normal-001",
+      "split_group": "radiologary-brain-mri-normal-001",
+      "source": {
+        "kind": "public_licensed_template_not_patient_record",
+        "title": "МРТ ГМ и ММУ (головного мозга и мостомозжечковых углов) - шаблон протокола",
+        "url": "https://radiologary.ru/templates/mrt-golovnogo-mozga-i-mmu-norma.html",
+        "publisher": "Radiologary",
+        "editor": "Д. Г. Королев",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "publisher_license_url": "https://radiologary.ru/license.html",
+        "retrieved_date": "2026-10-04",
+        "adaptation": "Исходные клинические предложения сохранены дословно. Добавлены заголовок Описание, учебная маркировка, case_id, атрибуция; изменены только оформление, разбивка по страницам и контейнер файла. В варианте description-only заключение намеренно удалено."
+      },
+      "expected": {
+        "document_status": "ready_after_ocr_review",
+        "reader": "image_ocr",
+        "page_count": 1,
+        "completeness": "complete",
+        "description_present": true,
+        "conclusion_present": true,
+        "clinical_ground_truth": "ground-truth/case.json",
+        "medical_route_ground_truth": null
+      }
+    },
+    {
+      "fixture_id": "brain-mri-image-only-pdf",
+      "path": "files/brain-mri-image-only.pdf",
+      "sha256": "2087666c78e4fcace2adfc96331ee0741bcd413e866074b539056cd098579067",
+      "byte_length": 341926,
+      "mime_type": "application/pdf",
+      "case_id": "radiologary-brain-mri-normal-001",
+      "case_family": "radiologary-brain-mri-normal-001",
+      "split_group": "radiologary-brain-mri-normal-001",
+      "source": {
+        "kind": "public_licensed_template_not_patient_record",
+        "title": "МРТ ГМ и ММУ (головного мозга и мостомозжечковых углов) - шаблон протокола",
+        "url": "https://radiologary.ru/templates/mrt-golovnogo-mozga-i-mmu-norma.html",
+        "publisher": "Radiologary",
+        "editor": "Д. Г. Королев",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "publisher_license_url": "https://radiologary.ru/license.html",
+        "retrieved_date": "2026-10-04",
+        "adaptation": "Исходные клинические предложения сохранены дословно. Добавлены заголовок Описание, учебная маркировка, case_id, атрибуция; изменены только оформление, разбивка по страницам и контейнер файла. В варианте description-only заключение намеренно удалено."
+      },
+      "expected": {
+        "document_status": "ready_after_ocr_review",
+        "reader": "pdf_page_ocr",
+        "page_count": 1,
+        "completeness": "complete",
+        "description_present": true,
+        "conclusion_present": true,
+        "clinical_ground_truth": "ground-truth/case.json",
+        "medical_route_ground_truth": null
+      }
+    },
+    {
+      "fixture_id": "brain-mri-mixed-two-pages-pdf",
+      "path": "files/brain-mri-mixed-two-pages.pdf",
+      "sha256": "34fcdde33865cbef8d1923464fcc5c471db062df6c837fa62a65d47ed42f662b",
+      "byte_length": 160605,
+      "mime_type": "application/pdf",
+      "case_id": "radiologary-brain-mri-normal-001",
+      "case_family": "radiologary-brain-mri-normal-001",
+      "split_group": "radiologary-brain-mri-normal-001",
+      "source": {
+        "kind": "public_licensed_template_not_patient_record",
+        "title": "МРТ ГМ и ММУ (головного мозга и мостомозжечковых углов) - шаблон протокола",
+        "url": "https://radiologary.ru/templates/mrt-golovnogo-mozga-i-mmu-norma.html",
+        "publisher": "Radiologary",
+        "editor": "Д. Г. Королев",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "publisher_license_url": "https://radiologary.ru/license.html",
+        "retrieved_date": "2026-10-04",
+        "adaptation": "Исходные клинические предложения сохранены дословно. Добавлены заголовок Описание, учебная маркировка, case_id, атрибуция; изменены только оформление, разбивка по страницам и контейнер файла. В варианте description-only заключение намеренно удалено."
+      },
+      "expected": {
+        "document_status": "ready_after_ocr_review",
+        "reader": "hybrid_pdf_page_text_and_ocr",
+        "page_count": 2,
+        "completeness": "complete",
+        "description_present": true,
+        "conclusion_present": true,
+        "clinical_ground_truth": "ground-truth/case.json",
+        "medical_route_ground_truth": null,
+        "page_readers": [
+          {
+            "page": 1,
+            "reader": "pdf_text",
+            "section": "description"
+          },
+          {
+            "page": 2,
+            "reader": "ocr",
+            "section": "conclusion"
+          }
+        ]
+      }
+    },
+    {
+      "fixture_id": "brain-mri-password-pdf",
+      "path": "files/brain-mri-password.pdf",
+      "sha256": "5e99279fe919d40bb33088278ac4fbfcf48ecafc2339f204f897a3f7996e0b8b",
+      "byte_length": 53605,
+      "mime_type": "application/pdf",
+      "case_id": "radiologary-brain-mri-normal-001",
+      "case_family": "radiologary-brain-mri-normal-001",
+      "split_group": "radiologary-brain-mri-normal-001",
+      "source": {
+        "kind": "public_licensed_template_not_patient_record",
+        "title": "МРТ ГМ и ММУ (головного мозга и мостомозжечковых углов) - шаблон протокола",
+        "url": "https://radiologary.ru/templates/mrt-golovnogo-mozga-i-mmu-norma.html",
+        "publisher": "Radiologary",
+        "editor": "Д. Г. Королев",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "publisher_license_url": "https://radiologary.ru/license.html",
+        "retrieved_date": "2026-10-04",
+        "adaptation": "Исходные клинические предложения сохранены дословно. Добавлены заголовок Описание, учебная маркировка, case_id, атрибуция; изменены только оформление, разбивка по страницам и контейнер файла. В варианте description-only заключение намеренно удалено."
+      },
+      "expected": {
+        "document_status": "needs_password_or_unlocked_copy",
+        "reader": "pdf_password_detection",
+        "page_count": 1,
+        "completeness": "complete",
+        "description_present": true,
+        "conclusion_present": true,
+        "clinical_ground_truth": "ground-truth/case.json",
+        "medical_route_ground_truth": null,
+        "test_password": "demo123"
+      }
+    },
+    {
+      "fixture_id": "corrupted-pdf",
+      "path": "files/corrupted.pdf",
+      "sha256": "b84568ea7983e7727e0f6ab1697115891182fb465ad5f6323b3f948db3b5d5c4",
+      "byte_length": 108,
+      "mime_type": "application/pdf",
+      "case_id": "invalid-corrupted-pdf-001",
+      "case_family": "invalid-corrupted-pdf-001",
+      "split_group": "invalid-corrupted-pdf-001",
+      "source": {
+        "kind": "synthetic_negative_fixture",
+        "contains_real_patient_data": false
+      },
+      "expected": {
+        "document_status": "rejected_corrupted",
+        "reader": "pdf_validation",
+        "page_count": null,
+        "completeness": "unavailable",
+        "description_present": false,
+        "conclusion_present": false,
+        "clinical_ground_truth": null,
+        "medical_route_ground_truth": null
+      }
+    },
+    {
+      "fixture_id": "brain-mri-description-only-txt",
+      "path": "files/brain-mri-description-only.txt",
+      "sha256": "448cc3e2560adb1c8542b113cf2677eba7009b55728672fa626b2a5a6e132183",
+      "byte_length": 3084,
+      "mime_type": "text/plain",
+      "case_id": "radiologary-brain-mri-normal-001",
+      "case_family": "radiologary-brain-mri-normal-001",
+      "split_group": "radiologary-brain-mri-normal-001",
+      "source": {
+        "kind": "public_licensed_template_not_patient_record",
+        "title": "МРТ ГМ и ММУ (головного мозга и мостомозжечковых углов) - шаблон протокола",
+        "url": "https://radiologary.ru/templates/mrt-golovnogo-mozga-i-mmu-norma.html",
+        "publisher": "Radiologary",
+        "editor": "Д. Г. Королев",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "publisher_license_url": "https://radiologary.ru/license.html",
+        "retrieved_date": "2026-10-04",
+        "adaptation": "Исходные клинические предложения сохранены дословно. Добавлены заголовок Описание, учебная маркировка, case_id, атрибуция; изменены только оформление, разбивка по страницам и контейнер файла. В варианте description-only заключение намеренно удалено."
+      },
+      "expected": {
+        "document_status": "needs_review_missing_conclusion",
+        "reader": "utf8_text",
+        "page_count": null,
+        "completeness": "description_only",
+        "description_present": true,
+        "conclusion_present": false,
+        "clinical_ground_truth": "ground-truth/case.json",
+        "medical_route_ground_truth": null
+      }
+    },
+    {
+      "fixture_id": "non-medical-txt",
+      "path": "files/non-medical.txt",
+      "sha256": "f9392f40cef2ea5f8ebb74708e633f3407d57852baad039c043a2953ba2d4068",
+      "byte_length": 235,
+      "mime_type": "text/plain",
+      "case_id": "synthetic-shopping-list-001",
+      "case_family": "synthetic-shopping-list-001",
+      "split_group": "synthetic-shopping-list-001",
+      "source": {
+        "kind": "synthetic_negative_fixture",
+        "contains_real_patient_data": false
+      },
+      "expected": {
+        "document_status": "rejected_irrelevant",
+        "reader": "utf8_text_and_document_classification",
+        "page_count": null,
+        "completeness": "non_medical",
+        "description_present": false,
+        "conclusion_present": false,
+        "clinical_ground_truth": null,
+        "medical_route_ground_truth": null
+      }
+    }
+  ]
+}

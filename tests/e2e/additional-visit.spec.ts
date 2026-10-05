@@ -1,0 +1,32 @@
+import { chooseOption } from './helpers';
+import { expect, test } from './test';
+import { openDemoScenario } from './helpers';
+
+test('independent patient choice remains distinct, is explicitly confirmed and does not overlap existing visit', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 900 });
+  await page.goto('/patient');
+  await openDemoScenario(page);
+  await page.getByRole('button', { name: 'Подтвердить текст и создать маршрут' }).click();
+  await page.getByRole('button', { name: 'Записаться ещё к врачу', exact: false }).click();
+  await chooseOption(page.getByRole('dialog').getByLabel('Специальность'), 'therapy');
+  await page.getByRole('button', { name: 'Добавить в план', exact: true }).click();
+  await expect(page.getByText('По вашему выбору · вне медицинских рекомендаций', { exact: true })).toBeVisible();
+  const first = page.getByRole('article').filter({ has: page.getByRole('heading', { name: 'Консультация пульмонолога', exact: true }) });
+  await first.getByRole('button', { name: 'Выбрать врача', exact: true }).click();
+  await page.getByRole('dialog').getByRole('button', { name: '09:00', exact: true }).first().click();
+  await page.getByRole('dialog').getByRole('button', { name: 'Продолжить' }).click();
+  await page.getByRole('dialog').getByRole('button', { name: 'Подтвердить демозапись' }).click();
+  const manual = page.getByRole('article').filter({ hasText: 'По вашему выбору · вне медицинских рекомендаций' });
+  await manual.getByRole('button', { name: 'Выбрать врача', exact: true }).click();
+  await expect(page.getByRole('dialog').getByRole('button', { name: '09:00', exact: true })).toHaveCount(0);
+  await page.getByRole('dialog').getByRole('button', { name: '12:00', exact: true }).first().click();
+  await page.getByRole('dialog').getByRole('button', { name: 'Продолжить' }).click();
+  await expect(page.getByRole('dialog').getByText('Запись ещё не подтверждена', { exact: true })).toBeVisible();
+  await page.getByRole('dialog').getByRole('button', { name: 'Подтвердить демозапись' }).click();
+  await page.getByRole('button', { name: 'Завершить планирование', exact: true }).click();
+  await expect(page.getByText('Демозапись создана. Клиника не получала заявку.', { exact: true })).toHaveCount(2);
+  await expect(page.getByRole('heading', { name: 'Маршрут завершён', exact: true })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Скачать событие календаря', exact: true })).toHaveCount(0);
+  await expect(page.getByRole('button', { name: 'Скачать календарь маршрута', exact: true })).toHaveCount(1);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
+});

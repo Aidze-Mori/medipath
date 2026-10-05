@@ -1,0 +1,153 @@
+{
+  "checks": [
+    {
+      "check": "txt_has_exact_sections",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "description_ground_truth_exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "conclusion_ground_truth_exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "docx_clinical_text_preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "docx_no_personal_metadata",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "doc_ole_magic",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "doc_roundtrip_clinical_text_preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "doc_roundtrip_one_page",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "native_pdf_one_page",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "native_pdf_clinical_text_preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "scan_pdf_has_no_text_layer",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "scan_pdf_has_image",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "mixed_pdf_two_pages",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "mixed_page1_native_description_only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "mixed_page2_image_without_text",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "password_pdf_encrypted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "wrong_password_rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "demo_password_accepted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "decrypted_pdf_clinical_text_preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "corrupted_pdf_parse_fails",
+      "passed": true,
+      "detail": "PdfReadError"
+    },
+    {
+      "check": "png_size_and_format",
+      "passed": true,
+      "detail": {
+        "size": [
+          1654,
+          2339
+        ],
+        "format": "PNG"
+      }
+    },
+    {
+      "check": "jpg_size_and_format",
+      "passed": true,
+      "detail": {
+        "size": [
+          1654,
+          2339
+        ],
+        "format": "JPEG"
+      }
+    },
+    {
+      "check": "description_only_section_removed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "non_medical_no_report_sections",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "twelve_input_files",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "all_passed": true,
+  "limitations": [
+    "OCR not run; raster fixtures are clean and do not establish real-world photo recognition quality.",
+    "No clinical gold routes or medical validation.",
+    "Application support is not implemented or tested by this fixture preparation."
+  ],
+  "visual_review": {
+    "status": "passed",
+    "checked": "All unique DOCX page and valid PDF page layouts; native PDF raster, image-only PDF, both mixed PDF pages, encrypted PDF with test password. No clipping, missing glyphs or overlapping text observed.",
+    "docx_page_count": 1,
+    "corrupted_pdf": "Intentionally cannot render; parse failure is expected."
+  }
+}

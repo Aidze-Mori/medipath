@@ -1,0 +1,22 @@
+{
+  "version": "clinical-demo-2026-10-05-v1",
+  "scope": "canonical_synthetic_only",
+  "clinicalReviewed": false,
+  "sources": [
+    {"id":"kr598-v3-oncology","title":"Доброкачественная дисплазия молочной железы","version":"598_3 · 2024","url":"https://cr.minzdrav.gov.ru/view-cr/598_3","section":"§ 2.4, PDF с. 21: категории BI-RADS 0, 3, 4, 5","quote":"необходим прием (осмотр, консультация) врача-онколога первичный","checkedAt":"2026-10-05","review":"technical_only","clinicalReviewed":false},
+    {"id":"kr598-v3-incomplete","title":"Доброкачественная дисплазия молочной железы","version":"598_3 · 2024","url":"https://cr.minzdrav.gov.ru/view-cr/598_3","section":"§ 2.4, PDF с. 21: BI-RADS 0","quote":"Необходимы дополнительные изображения или данные предыдущего обследования.","checkedAt":"2026-10-05","review":"technical_only","clinicalReviewed":false},
+    {"id":"kr598-v3-screening","title":"Доброкачественная дисплазия молочной железы","version":"598_3 · 2024","url":"https://cr.minzdrav.gov.ru/view-cr/598_3","section":"Приложение Г1, таблица 4, PDF с. 78: BI-RADS 2, маммография","quote":"Рутинный скрининг","checkedAt":"2026-10-05","review":"technical_only","clinicalReviewed":false}
+  ],
+  "scenarios": [
+    {"fixtureId":"clinical-birads4","proposals":[
+      {"id":"birads4-discuss-oncology","kind":"specialist","title":"Обсудить консультацию онколога","rationale":"В учебном заключении BI-RADS 4. Раздел 2.4 КР связывает эту категорию с консультацией онколога для уточнения диагноза и дальнейшей тактики. Это предложение требует проверки врачом, диагноз не установлен.","specialtyId":"oncology","sourceIds":["kr598-v3-oncology"],"evidenceSection":"conclusion"}
+    ]},
+    {"fixtureId":"clinical-birads0","proposals":[
+      {"id":"birads0-discuss-oncology","kind":"specialist","title":"Обсудить консультацию онколога","rationale":"Для учебной категории BI-RADS 0 КР предусматривает консультацию онколога. Врач уточняет неполный результат и дальнейшие действия; категория сама по себе не устанавливает диагноз.","specialtyId":"oncology","sourceIds":["kr598-v3-oncology"],"evidenceSection":"conclusion"},
+      {"id":"birads0-additional-images","kind":"additional_exam","title":"Обсудить рекомендованное обследование","rationale":"Исходник и КР указывают на недостаточность изображений. Обсудите с врачом дополнительные изображения или получение предыдущего исследования; конкретную процедуру приложение не назначает.","specialtyId":null,"sourceIds":["kr598-v3-incomplete"],"evidenceSection":"recommendations"}
+    ]},
+    {"fixtureId":"clinical-birads2","proposals":[
+      {"id":"birads2-routine-screening","kind":"no_additional_exam","title":"Дополнительное исследование в исходнике не требуется","rationale":"В этом учебном исходнике нет нового назначения. Таблица КР для BI-RADS 2 описывает рутинный скрининг. Это не отменяет оценку новых жалоб и индивидуального риска врачом.","specialtyId":null,"sourceIds":["kr598-v3-screening"],"evidenceSection":"recommendations"}
+    ]}
+  ]
+}

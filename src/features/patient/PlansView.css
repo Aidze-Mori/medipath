@@ -1,0 +1,36 @@
+.plans-library, .completed-plan { display: grid; gap: var(--mp-space-24); min-width: 0; }
+.saved-plan { display: flex; align-items: center; gap: var(--mp-space-20); }
+.saved-plan-icon, .completed-plan-check { display: grid; place-items: center; background: var(--mp-selected); color: var(--mp-primary); width: 48px; height: 48px; border-radius: var(--mp-radius-card); flex-shrink: 0; }
+.saved-plan-body { flex: 1; min-width: 0; }
+.saved-plan h3 { margin: 8px 0; overflow-wrap: anywhere; }
+.saved-plan p { margin: 0; }
+.plan-status { font-size: var(--mp-font-size-caption); color: var(--mp-muted); }
+.plan-status.is-complete { color: var(--mp-primary); }
+.completed-plan-heading { display: flex; gap: var(--mp-space-16); align-items: center; }
+.completed-plan-heading p { margin: 4px 0; }
+.completed-plan-heading h2 { margin: 4px 0; }
+.plan-documents { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 12px; }
+.plan-documents li { display: flex; justify-content: space-between; gap: 16px; }
+.completed-visit .visit-booking { margin: 0; }
+.plan-summary-actions { display: flex; align-items: center; flex-wrap: wrap; gap: var(--mp-space-16); }
+.plan-feedback { border-top: 1px solid var(--mp-border); padding-top: var(--mp-space-24); margin-top: var(--mp-space-12); }
+.plan-feedback .button-row { margin: var(--mp-space-16) 0; }
+.plan-feedback .btn[aria-pressed='true'] { border-color: var(--mp-primary); background: var(--mp-selected); color: var(--mp-primary); }
+@media (max-width: 767px) {
+  .saved-plan { flex-wrap: wrap; gap: var(--mp-space-12); }
+  .saved-plan-icon { display: none; }
+  .saved-plan-body { flex-basis: 100%; }
+  .saved-plan > .btn { width: 100%; }
+  .plans-library > .panel-head { align-items: stretch; flex-direction: column; }
+  .completed-plan-heading { align-items: flex-start; }
+  .completed-plan-heading h2 { font-size: 24px; }
+  .plan-documents li { flex-direction: column; gap: 4px; }
+  .plan-summary-actions { align-items: stretch; flex-direction: column; }
+}
+
+.clinic-brand { display: flex; align-items: center; gap: 10px; }
+.clinic-brand-mark { display: grid; place-items: center; background: var(--mp-primary); color: white; width: 36px; height: 36px; border-radius: 10px; }
+.work-processing-choice { display: grid; gap: 8px; }
+.work-processing-choice p { margin: 0; }
+.analysis-explanation > h3 { display: flex; gap: 8px; align-items: center; }
+.analysis-explanation blockquote { margin: 12px 0; padding: 12px 16px; background: var(--mp-canvas); border-left: 2px solid var(--mp-primary); }

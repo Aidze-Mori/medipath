@@ -1,0 +1,51 @@
+{
+  "name": "medipath",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "dev:api": "node --env-file-if-exists=.env --import tsx server/http.ts",
+    "build": "npm run typecheck && vite build && node scripts/prepare-assets.mjs --target dist && node scripts/verify-build.mjs --target dist && esbuild server/http.ts --bundle --platform=node --format=esm --packages=external --outfile=dist-server/server.mjs",
+    "start": "node --env-file-if-exists=.env dist-server/server.mjs",
+    "preview": "vite preview --host 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "smoke:production": "node scripts/smoke-production.mjs",
+    "prepare:assets": "node scripts/prepare-assets.mjs",
+    "verify:corpus": "node scripts/verify-corpus.mjs",
+    "verify:build": "node scripts/verify-build.mjs",
+    "package:release": "node scripts/package-release.mjs"
+  },
+  "dependencies": {
+    "fflate": "0.8.3",
+    "lucide-react": "1.52.0",
+    "pdfjs-dist": "6.4.299",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "tesseract.js": "7.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.63.0",
+    "@tesseract.js-data/eng": "1.0.0",
+    "@tesseract.js-data/rus": "1.0.0",
+    "@types/node": "26.6.4",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.1",
+    "esbuild": "0.28.2",
+    "eslint": "10.12.0",
+    "globals": "17.13.0",
+    "tsx": "4.23.15",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.71.0",
+    "vite": "8.3.2",
+    "vitest": "5.0.3"
+  }
+}
